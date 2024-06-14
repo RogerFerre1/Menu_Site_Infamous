@@ -1,0 +1,136 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #000000;
+    height: 100px;
+}
+
+.navbar_logo img{
+    width: 250px;
+    margin-top: 10px;
+}
+
+
+.navbar_button{
+    width: 80px;
+    margin-bottom: 50px;
+    margin-left: 1550px;
+    display: none;
+}
+
+.navbar_links ul{
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.navbar_links li{
+    list-style-type: none;
+    margin-right: 10px;
+}
+
+.navbar_links a{
+    text-decoration: none;
+    color: #ffffff;
+    padding: 5px;
+    display: block;
+    font-size: 25px;
+    /* margin-top: 0px; */
+    
+}
+
+.navbar_links a:hover{
+    text-decoration: underline;
+}
+
+.navbar_button{
+    position: absolute;
+    top: 0.75rem;
+    right: 1rem;
+    display: block;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 40px;
+    height: 30px;
+    margin-top: 20px;
+}
+
+.navbar_button .bar{
+    height: 3px;
+    width: 100%;
+    background-color: #ffffff;
+    border-radius: 10px;
+    transition: 0.6s;
+}
+@media(max-width:600px){
+    .navbar_logo{
+        margin-top: -15px;
+    }
+
+    .navbar_button{
+        display: flex;
+    }
+
+    .navbar_links{
+        display: none;
+        width: 100%;
+        background-color: #000000;
+        margin-top: -30px;
+    }
+
+    .navbar{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .navbar_links ul{
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .navbar_links li{
+        text-align: center;
+    }
+
+    .navbar_links li a{
+        padding: 1rem;
+    }
+
+    .navbar_links.active{
+        display: flex;
+    }
+
+    .navbar_links.active{
+        position: relative;
+    }
+
+    .navbar_links.active{
+        display: block;
+        width: 100%;
+    }
+
+    #top, #bottom{
+        transform-origin: left;
+    }
+
+    .navbar.active .navbar_button #top{
+        transform: rotate(37deg);
+        transition: 0.6s;
+    }
+
+    .navbar.active .navbar_button #center{
+        opacity: 0;
+        transition: 0.6s;
+    }
+
+    .navbar.active .navbar_button #bottom{
+        transform: rotate(-37deg);
+        transition: 0.6s;
+    }
+}
